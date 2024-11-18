@@ -1,0 +1,18 @@
+.contenedor-producto-mas-detalles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+.nombre-mas-detalles{
+    font-size: 30px;
+}
+.img-mas-detalles{
+    width: 47%;
+    object-fit: cover;
+}
+.description-mas-detalles{
+    margin: 20px;
+    font-size: 18px;
+    width: 900px;
+}

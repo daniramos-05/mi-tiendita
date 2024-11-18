@@ -1,0 +1,32 @@
+.contenedor-items{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px black solid;
+    width: 500px;
+}
+.nombre{
+    font-size: 30px;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.description{
+    margin: 10px;
+}
+.precio{
+    font-weight: bold;
+}
+.mas-detalles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    border: 1px black dashed;
+}

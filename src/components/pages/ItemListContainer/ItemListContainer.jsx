@@ -22,7 +22,7 @@ const ItemListContainer = () => {
         console.log("Finally");
       });
   }, [nombre]);
-  return <ItemList productos={productos} />;
+  return <ItemList productos={producto} />;
 };
 
 export default ItemListContainer;

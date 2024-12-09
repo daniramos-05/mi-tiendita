@@ -1,5 +1,11 @@
-
-.negro{
+.contenedor-itemcount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 30px;
+}
+.boton{
     background-color: black;
     color: white;
     margin: 10px;
@@ -13,23 +19,6 @@
     &:hover{
         width: 180px;
         height: 50px;
-        border: 2px black solid;
-        transition: 1s;
-    }
-}
-.gris{
-    background-color: gray;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    width: 100px;
-    height: 30px;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 1s;
-    &:hover{
-        width: 120px;
-        height: 35px;
         border: 2px black solid;
         transition: 1s;
     }

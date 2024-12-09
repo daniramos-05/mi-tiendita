@@ -1,32 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "../../common/Button/Button";
 import "./ItemCount.css";
+import { CartContext } from "../../../context/CartContext";
+import { useContext } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({ productos }) => {
   const [count, setCount] = useState(1);
-  const [productos, setProductos] = useState(1);
-  const [ordenados, setOrdenados] = useState(true);
-
-  // useEffect(() => {
-  //    if(count === 5){
-  //      console.log("llamo a mi base de datos para buscar ofertas")}
-  // }, [count])
-
-  useEffect(() => {
-    if (ordenados) {
-      console.log("estan ordenados");
-    } else {
-      console.log("estan desordenados");
-    }
-  }, []);
-
-  console.log("el componente se renderiza");
+  const { addToCart } = useContext(CartContext);
 
   const sumar = () => {
     if (count < 10) setCount(count + 1);
   };
+
   const restar = () => {
     if (count > 1) setCount(count - 1);
+  };
+
+  const onAdd = () => {
+    let productToCart = { ...productos, quantity: count };
+    addToCart (productToCart)
   };
 
   return (
@@ -35,9 +27,9 @@ const ItemCount = () => {
         <Button text="-" fn={restar} color="negro" />
         <span>{count}</span>
         <Button text="+" fn={sumar} color="negro" />
+        <button className="boton" onClick={onAdd} > Agregar Al Carrito</button>
       </div>
     </>
   );
 };
-
 export default ItemCount;

@@ -4,7 +4,8 @@ import "./ItemCount.css";
 import { CartContext } from "../../../context/CartContext";
 import { useContext } from "react";
 
-const ItemCount = ({ productos }) => {
+const ItemCount = ({ producto }) => {
+  console.log(producto)
   const [count, setCount] = useState(1);
   const { addToCart } = useContext(CartContext);
 
@@ -17,7 +18,7 @@ const ItemCount = ({ productos }) => {
   };
 
   const onAdd = () => {
-    let productToCart = { ...productos, quantity: count };
+    let productToCart = { ...producto, quantity: count };
     addToCart (productToCart)
   };
 

@@ -8,3 +8,7 @@
     justify-content: space-around;
     gap: 30px;
 }
+.cargando{
+    display: flex;
+    justify-content: center;
+}

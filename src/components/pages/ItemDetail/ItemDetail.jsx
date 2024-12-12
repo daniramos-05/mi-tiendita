@@ -3,14 +3,19 @@ import { useParams } from "react-router-dom"
 import { productos } from "../../../products"
 import "./ItemDetail.css"
 import ItemCount from "../../common/ItemCount/ItemCount"
+import { db } from "../../../firebaseConfig"
+import { collection, doc, geetDoc, getDoc } from "firebase/firestore"
 
 
 const ItemDetail = () => {
   const { id } = useParams()
   const [ producto, setProducto ] = useState({})
   useEffect(() => {
-    let productSelected =  productos.find((el) => el.id === +id )
-    setProducto(productSelected)
+    let productsCollection = collection( db , "products" )
+    let refDoc = doc( productsCollection, id )
+    const getDocById = getDoc( refDoc )
+    getDocById.then((res) => setProducto({...res.data(), id: res.id}))
+
   }, [id])
 
   return (

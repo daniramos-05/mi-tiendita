@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { productos } from "../../../products"
+// import { productos } from "../../../products"
 import "./ItemDetail.css"
 import ItemCount from "../../common/ItemCount/ItemCount"
 import { db } from "../../../firebaseConfig"
-import { collection, doc, geetDoc, getDoc } from "firebase/firestore"
+import { collection, doc, getDoc } from "firebase/firestore"
 
 
 const ItemDetail = () => {

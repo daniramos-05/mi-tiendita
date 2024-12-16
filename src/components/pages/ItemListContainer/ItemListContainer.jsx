@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { BeatLoader } from "react-spinners"
 import ItemList from "../ItemList/ItemList";
 import { db } from "../../../firebaseConfig"
-import { collection, addDoc, getDocs, query, where } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 // import { productos } from "../../../products";
 
 

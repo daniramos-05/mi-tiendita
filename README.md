@@ -3,6 +3,8 @@
 
 **Podes verificar tu salto total y seguir con tu compra con el boton "Finalizar Compra", ahi necesitaria que ingreses unos datos para poder generarte un numero de ticket para poder retirar la compra, muchas gracias.** 
 
+---
+### A continuacion adjunto el link de mi tiendita: 
 
     https://mi-tiendita-in6s.vercel.app
 

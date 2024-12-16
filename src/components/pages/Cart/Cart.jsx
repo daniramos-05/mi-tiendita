@@ -9,7 +9,7 @@ const Cart = () => {
   return (
     <div className='contenedor-carrito'> 
       <h2>Carrito </h2>
-      {
+      {cart.length > 0 ? (
         cart.map((elemento) => {
           return (
             <div className="contenedor-productos-carrito" key={elemento.id}>
@@ -22,12 +22,16 @@ const Cart = () => {
             </div>
           );
         })
-      }
-      <h4>El Total del precio es: ${totalAmount}</h4>
-      <button className='limpiar' onClick={resetCart}>Limpiar Todo El Carrito</button>
-      <Link to="/checkout"><button className='finalizar'>Finalizar Compra</button></Link>
+    ) : (
+      <h2>El Carrito Esta Vacio</h2>)}
+      {cart.length > 0 && (
+      <div>
+        <h4>El Total del precio es: ${totalAmount}</h4>
+        <button className='limpiar' onClick={resetCart}>Limpiar Todo El Carrito</button>
+        <Link to="/checkout"><button className='finalizar'>Finalizar Compra</button></Link>
+      </div>
+      )}
     </div>
-
   )
 }
 

@@ -21,7 +21,6 @@ const Checkout = () => {
 
     const funcionDelFormulario = (e) =>{
       e.preventDefault();
-      console.log("Se Envian Datos a la API", userData)
         let total = getTotalPrice()
         let order = {
         buyer: userData, 
